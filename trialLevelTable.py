@@ -1,6 +1,5 @@
 ###----We did not use per-participant trials for our table in the paper----
 
-python3 << 'EOF'
 import numpy as np, pandas as pd
 from scipy import stats
 
@@ -29,4 +28,4 @@ t_t, p_t = stats.ttest_rel(b, n)
 print(f"BIOPAC  — mean: {b.mean():.4f} s, SD: {b.std(ddof=1):.4f} s")
 print(f"Noraxon — mean: {n.mean():.4f} s, SD: {n.std(ddof=1):.4f} s")
 print(f"Paired t-test (trial level, n=17): t={t_t:.4f}, p={p_t:.4f}")
-EOF
+
